@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Display</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAlJP3oBFCzMoG6O7UjmaH4zOnL8IETN0" async defer></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body class="fog-blue">
+    <nav class="fog-wine" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="index.html" class="brand-logo white-text">Go Fly</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="white-text" href="#">Display</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="#">Display</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <main>
+
+        <div class="row">
+            <div class="col s12 m12 l6">
+                <!-- <div class="section no-pad-bot"> -->
+                <div class="container">
+                    <!-- <br><br> -->
+                    <h3 class="header black-text text-darken-2" id="header-icon">Conditions</h3>
+
+                </div>
+
+
+                <!-- FORECAST -->
+                <!-- <div>
+                  <iframe id="forecast_embed" type="text/html" frameborder="0" height="245"
+                  width="100%"
+                  src="http://forecast.io/embed/#lat=42.3583&lon=-71.0603&name=Downtown Boston&color=#00aaff&font=Georgia&units=uk">
+                  </iframe>
+                </div> -->
+
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <div class="card-small cyan accent-4">
+                            <div class="card-image" id="wSpeed">
+                                <!-- <img src="img/krabby.jpg"> -->
+                            </div>
+                            <div class="card-content">
+                                <h5> Wind Speed </h5>
+                                <!-- <p>$8.99</p> -->
+                            </div>
+                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
+                                <!-- <a href="#">ADD TO ORDER</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m12 l6">
+                        <div class="card-small cyan accent-4">
+                            <div class="card-image" id="bearing">
+                                <!-- <img src="img/pho.jpg"> -->
+                            </div>
+                            <div class="card-content">
+                                <h5> Wind Bearing </h5>
+                                <!-- <p>$11.99</p> -->
+                            </div>
+                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
+                                <!-- <a href="#">ADD TO ORDER</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l6">
+                    <div class="card-small cyan accent-4">
+                        <div class="card-image" id="gust">
+                            <!-- <img src="img/loco.jpg"> -->
+                        </div>
+                        <div class="card-content">
+                            <h5> Wind Gust </h5>
+                            <!-- <p>$9.99</p> -->
+                        </div>
+                        <div class="card-action addToOrder deep-purple darken-4 darken-1">
+                            <!-- <a href="#">ADD TO ORDER</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <div class="card-small cyan accent-4">
+                            <div class="card-image" id="temp">
+                                <!-- <img src="img/curry.jpg"> -->
+                            </div>
+                            <div class="card-content">
+                                <h5> Temperature </h5>
+                                <!-- <p>$13.99</p> -->
+                            </div>
+                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
+                                <!-- <a href="#">ADD TO ORDER</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <div class="card-small cyan accent-4">
+                            <div class="card-image" id="humidity">
+                                <!-- <img src="img/donut.jpg"> -->
+                            </div>
+                            <div class="card-content">
+                                <h5> Humidity </h5>
+                                <!-- <p>$4.99</p> -->
+                            </div>
+                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
+                                <!-- <a href="#">ADD TO ORDER</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m12 l6">
+                        <div class="card-small cyan accent-4">
+                            <div class="card-image" id="precip">
+                                <!-- <img src="img/cake.jpg"> -->
+                            </div>
+                            <div class="card-content">
+                                <h5> Precipitation </h5>
+                                <!-- <p>$14.99</p> -->
+                            </div>
+                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
+                                <!-- <a href="#">ADD TO ORDER</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <div class="card-small cyan accent-4">
+                            <div class="card-image" id="vis">
+                                <!-- <img src="img/donut.jpg"> -->
+                            </div>
+                            <div class="card-content">
+                                <h5> Visibility </h5>
+                                <!-- <p>$4.99</p> -->
+                            </div>
+                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
+                                <!-- <a href="#">ADD TO ORDER</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m12 l6">
+                        <div class="card-small cyan accent-4">
+                            <div class="card-image" id="pressure">
+                                <!-- <img src="img/cake.jpg"> -->
+                            </div>
+                            <div class="card-content">
+                                <h5> Pressure </h5>
+                                <!-- <p>$14.99</p> -->
+                            </div>
+                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
+                                <!-- <a href="#">ADD TO ORDER</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <div class="card-small cyan accent-4">
+                            <div class="card-image" id="wind-condition">
+                                <!-- <img src="img/donut.jpg"> -->
+                            </div>
+                            <div class="card-content">
+                                <h5> Wind Conditions </h5>
+                                <!-- <p>$4.99</p> -->
+                            </div>
+                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
+                                <!-- <a href="#">ADD TO ORDER</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m12 l6">
+                        <div class="card-small cyan accent-4">
+                            <div class="card-image" id="forecast">
+                                <!-- <img src="img/cake.jpg"> -->
+                            </div>
+                            <div class="card-content">
+                                <h5> Forecast </h5>
+                                <!-- <p>$14.99</p> -->
+                            </div>
+                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
+                                <!-- <a href="#">ADD TO ORDER</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MAP -->
+            <div class="row">
+                <div class="col s12 m5 ">
+                    <h3 class="header black-text text-darken-2">Graphical Display</h3>
+
+                    <div>
+                        <div class="container">
+                            <div class="row center">
+
+                                <form action="display.html" method="get">
+                                    <div class="col offset-s2 s7">
+                                        <div class="input-field ">
+                                            <input autofocus type="text" class="white-text" placeholder="Enter a Launch Location " id="search" name="search" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col s3">
+                                        <button class="btn-large waves-effect waves-light" type="submit" name="action" id="searchBtn">
+                          <i class="material-icons right">search</i>
+                          Search
+                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <head>
+
+                        <style>
+                            #map {
+                                height: 400px;
+                                width: 100%;
+                            }
+
+                            #description {
+                                font-family: Roboto;
+                                font-size: 15px;
+                                font-weight: 300;
+                            }
+
+                            #infowindow-content .title {
+                                font-weight: bold;
+                            }
+
+                            #infowindow-content {
+                                display: none;
+                            }
+
+                            #map #infowindow-content {
+                                display: inline;
+                            }
+
+                            .pac-card {
+                                margin: 10px 10px 0 0;
+                                border-radius: 2px 0 0 2px;
+                                box-sizing: border-box;
+                                -moz-box-sizing: border-box;
+                                outline: none;
+                                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+                                background-color: #fff;
+                                font-family: Roboto;
+                            }
+
+                            #pac-container {
+                                padding-bottom: 12px;
+                                margin-right: 12px;
+                            }
+
+                            .pac-controls {
+                                display: inline-block;
+                                padding: 5px 11px;
+                            }
+
+                            .pac-controls label {
+                                font-family: Roboto;
+                                font-size: 13px;
+                                font-weight: 300;
+                            }
+
+                            #pac-input {
+                                background-color: #fff;
+                                font-family: Roboto;
+                                font-size: 15px;
+                                font-weight: 300;
+                                margin-left: 12px;
+                                padding: 0 11px 0 13px;
+                                text-overflow: ellipsis;
+                                width: 400px;
+                            }
+
+                            #pac-input:focus {
+                                border-color: #4d90fe;
+                            }
+
+                            #title {
+                                color: #fff;
+                                background-color: #4d90fe;
+                                font-size: 25px;
+                                font-weight: 500;
+                                padding: 6px 12px;
+                            }
+
+                            #target {
+                                width: 345px;
+                            }
+                        </style>
+                    </head>
+
+                    <body>
+                        <div id="map"></div>
+                        <script>
+                        </script>
+                    </body>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="fog-purple">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <br><br>
+                    <a id="logo-bottom-container" href="index.html" class="brand-logo white-text"><h5>Go Fly</h5></a>
+                    <p class="white-text text-darken-4">Unmaned Aerial Vehicle Weather Monitoring</p>
+
+                </div>
+
+
+                <div class="col l3 s12">
+                    <br><br>
+                    <ul>
+                        <li><a class="white-text" href="index.html">Home</a></li>
+                        <li><a class="white-text reloadOrder" href="display.html">Display</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright fog-wine">
+            <div class="container white-text">
+                &copy; 2017 Go Fly
+                <a class="white-text"></a>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!--  Scripts-->
+
+
+
+</body>
+
+</html>
