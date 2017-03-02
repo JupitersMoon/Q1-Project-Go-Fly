@@ -20,11 +20,31 @@
 .fog-olive {
   background-color: #49541E !important;
 }
-.fog-reg {
+.fog-red {
   background-color: #9A3321 !important;
 }
 .fog-wine {
   background-color: #611828 !important;
+}
+
+.subtle-background {
+  background-image: url(/img/topography.png);
+  background-repeat: repeat;
+}
+
+
+.shadow-border {
+  border: 2px solid black;
+  box-shadow:4px 4px 14px black;
+  border-radius: 10px
+}
+
+.text-padding {
+  padding-left: 10%
+}
+
+.data-padding {
+  padding-left: 40%
 }
 
 
@@ -4384,12 +4404,14 @@ h3 {
 }
 
 h4 {
+  color: white;
   font-size: 2.28rem;
   line-height: 110%;
   margin: 1.14rem 0 0.912rem 0;
 }
 
 h5 {
+  color: white;
   font-size: 1.64rem;
   line-height: 110%;
   margin: 0.82rem 0 0.656rem 0;
@@ -5842,7 +5864,7 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field .prefix.active {
-  color: #26a69a;
+  color: #000000;
 }
 
 .input-field .prefix ~ input,

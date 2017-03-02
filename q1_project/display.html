@@ -17,7 +17,7 @@
     <script src="js/index.js"></script>
 </head>
 
-<body class="fog-blue">
+<body class="subtle-background">
     <nav class="fog-wine" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="index.html" class="brand-logo white-text">Go Fly</a>
@@ -38,7 +38,7 @@
                 <!-- <div class="section no-pad-bot"> -->
                 <div class="container">
                     <!-- <br><br> -->
-                    <h3 class="header black-text text-darken-2" id="header-icon">Conditions</h3>
+                    <h3 class="header black-text text-darken-2 text-padding" id="header-icon">Conditions</h3>
 
                 </div>
 
@@ -51,129 +51,122 @@
                   </iframe>
                 </div> -->
 
+                <div>
+                    <div class="container">
+                        <div class="row center">
+
+                            <form action="display.html" method="get">
+                                <div class="col offset-s2 s7">
+                                    <div class="input-field ">
+                                        <input autofocus type="text" class="black-text" placeholder="Enter a Launch Location" id="search" name="search" />
+                                    </div>
+                                </div>
+
+                                <div class="col s3">
+                                    <button class="btn-large waves-effect waves-light fog-wine" type="submit" name="action" id="searchBtn">
+                      <i class="material-icons right">search</i>
+                      Search
+                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="row">
                     <div class="col s12 m12 l6">
-                        <div class="card-small cyan accent-4">
-                            <div class="card-image" id="wSpeed">
-                                <!-- <img src="img/krabby.jpg"> -->
-                            </div>
-                            <div class="card-content">
-                                <h5> Wind Speed </h5>
-                                <!-- <p>$8.99</p> -->
-                            </div>
-                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
-                                <!-- <a href="#">ADD TO ORDER</a> -->
+                        <div class="card-small fog-red shadow-border">
+                          <div class="card-content text-padding">
+                              <h5> Wind Speed </h5>
+                          </div>
+                            <div class="card-image fog-wine data-padding" id="wSpeed">
                             </div>
                         </div>
                     </div>
 
                     <div class="col s12 m12 l6">
-                        <div class="card-small cyan accent-4">
-                            <div class="card-image" id="bearing">
-                                <!-- <img src="img/pho.jpg"> -->
-                            </div>
-                            <div class="card-content">
-                                <h5> Wind Bearing </h5>
-                                <!-- <p>$11.99</p> -->
-                            </div>
-                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
-                                <!-- <a href="#">ADD TO ORDER</a> -->
+                        <div class="card-small fog-red shadow-border">
+                          <div class="card-content text-padding">
+                              <h5> Wind Bearing </h5>
+                          </div>
+                            <div class="card-image fog-wine data-padding" id="bearing">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col s12 m12 l6">
-                    <div class="card-small cyan accent-4">
-                        <div class="card-image" id="gust">
-                            <!-- <img src="img/loco.jpg"> -->
-                        </div>
-                        <div class="card-content">
-                            <h5> Wind Gust </h5>
-                            <!-- <p>$9.99</p> -->
-                        </div>
-                        <div class="card-action addToOrder deep-purple darken-4 darken-1">
-                            <!-- <a href="#">ADD TO ORDER</a> -->
+                    <div class="card-small fog-red shadow-border">
+                      <div class="card-content text-padding">
+                          <h5> Wind Gust </h5>
+                      </div>
+                        <div class="card-image fog-wine data-padding" id="gust">
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col s12 m12 l6">
-                        <div class="card-small cyan accent-4">
-                            <div class="card-image" id="temp">
-                                <!-- <img src="img/curry.jpg"> -->
-                            </div>
-                            <div class="card-content">
-                                <h5> Temperature </h5>
-                                <!-- <p>$13.99</p> -->
-                            </div>
-                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
-                                <!-- <a href="#">ADD TO ORDER</a> -->
+                        <div class="card-small fog-red shadow-border">
+                          <div class="card-content text-padding">
+                              <h5> Temperature </h5>
+                          </div>
+                            <div class="card-image fog-wine data-padding" id="temp">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col s12 m12 l6">
-                        <div class="card-small cyan accent-4">
-                            <div class="card-image" id="humidity">
-                                <!-- <img src="img/donut.jpg"> -->
-                            </div>
-                            <div class="card-content">
-                                <h5> Humidity </h5>
-                                <!-- <p>$4.99</p> -->
-                            </div>
-                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
-                                <!-- <a href="#">ADD TO ORDER</a> -->
-                            </div>
+                  <div class="col s12 m12 l6">
+                      <div class="card-small fog-red shadow-border">
+                        <div class="card-content text-padding">
+                            <h5> Visibility </h5>
                         </div>
-                    </div>
+                          <div class="card-image fog-wine data-padding" id="vis">
+                          </div>
+                      </div>
+                  </div>
+
 
                     <div class="col s12 m12 l6">
-                        <div class="card-small cyan accent-4">
-                            <div class="card-image" id="precip">
-                                <!-- <img src="img/cake.jpg"> -->
-                            </div>
-                            <div class="card-content">
-                                <h5> Precipitation </h5>
-                                <!-- <p>$14.99</p> -->
-                            </div>
-                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
-                                <!-- <a href="#">ADD TO ORDER</a> -->
+                        <div class="card-small fog-red shadow-border">
+                          <div class="card-content text-padding">
+                              <h5> Precipitation </h5>
+                          </div>
+                            <div class="card-image fog-wine data-padding" id="precip">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col s12 m12 l6">
-                        <div class="card-small cyan accent-4">
-                            <div class="card-image" id="vis">
-                                <!-- <img src="img/donut.jpg"> -->
-                            </div>
-                            <div class="card-content">
-                                <h5> Visibility </h5>
-                                <!-- <p>$4.99</p> -->
-                            </div>
-                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
-                                <!-- <a href="#">ADD TO ORDER</a> -->
+                  <div class="col s12 m12 l6">
+                      <div class="card-small fog-red shadow-border">
+                        <div class="card-content text-padding">
+                            <h5> Humidity </h5>
+                        </div>
+                          <div class="card-image fog-wine data-padding" id="humidity">
+                          </div>
+                      </div>
+                  </div>
+                    <!-- <div class="col s12 m12 l6">
+                        <div class="card-small fog-red shadow-border">
+                          <div class="card-content text-padding">
+                              <h5> Visibility </h5>
+                          </div>
+                            <div class="card-image fog-wine data-padding" id="vis">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="col s12 m12 l6">
-                        <div class="card-small cyan accent-4">
-                            <div class="card-image" id="pressure">
-                                <!-- <img src="img/cake.jpg"> -->
-                            </div>
-                            <div class="card-content">
-                                <h5> Pressure </h5>
-                                <!-- <p>$14.99</p> -->
-                            </div>
-                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
-                                <!-- <a href="#">ADD TO ORDER</a> -->
+                        <div class="card-small fog-red shadow-border">
+                          <div class="card-content white-text text-padding">
+                              <h5> Pressure </h5>
+                          </div>
+                            <div class="card-image fog-wine data-padding" id="pressure">
                             </div>
                         </div>
                     </div>
@@ -181,71 +174,46 @@
 
                 <div class="row">
                     <div class="col s12 m12 l6">
-                        <div class="card-small cyan accent-4">
-                            <div class="card-image" id="wind-condition">
-                                <!-- <img src="img/donut.jpg"> -->
-                            </div>
-                            <div class="card-content">
-                                <h5> Wind Conditions </h5>
-                                <!-- <p>$4.99</p> -->
-                            </div>
-                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
-                                <!-- <a href="#">ADD TO ORDER</a> -->
+                        <div class="card-small fog-red shadow-border">
+                          <div class="card-content white-text text-padding">
+                            <h5> Wind Conditions </h5>
+                          </div>
+                            <div class="card-image fog-wine " id="wind-condition">
                             </div>
                         </div>
                     </div>
 
                     <div class="col s12 m12 l6">
-                        <div class="card-small cyan accent-4">
-                            <div class="card-image" id="forecast">
-                                <!-- <img src="img/cake.jpg"> -->
-                            </div>
-                            <div class="card-content">
-                                <h5> Forecast </h5>
-                                <!-- <p>$14.99</p> -->
-                            </div>
-                            <div class="card-action addToOrder deep-purple darken-4 darken-1">
-                                <!-- <a href="#">ADD TO ORDER</a> -->
+                        <div class="card-small fog-red shadow-border">
+                          <div class="card-content text-padding">
+                              <h5> Forecast </h5>
+                          </div>
+                            <div class="card-image fog-wine data-padding" id="forecast">
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+
 
             </div>
 
-            <!-- MAP -->
+
             <div class="row">
                 <div class="col s12 m5 ">
-                    <h3 class="header black-text text-darken-2">Graphical Display</h3>
+                    <h3 class="header black-text text-darken-2 data-padding">Display</h3>
 
-                    <div>
-                        <div class="container">
-                            <div class="row center">
 
-                                <form action="display.html" method="get">
-                                    <div class="col offset-s2 s7">
-                                        <div class="input-field ">
-                                            <input autofocus type="text" class="white-text" placeholder="Enter a Launch Location " id="search" name="search" />
-                                        </div>
-                                    </div>
-
-                                    <div class="col s3">
-                                        <button class="btn-large waves-effect waves-light" type="submit" name="action" id="searchBtn">
-                          <i class="material-icons right">search</i>
-                          Search
-                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
+        <!-- MAP -->
                     <head>
 
                         <style>
                             #map {
                                 height: 400px;
                                 width: 100%;
+                                border: 2px solid black;
+                                box-shadow: 0px 0px 14px black;;
                             }
 
                             #description {
@@ -328,13 +296,41 @@
                         </script>
                     </body>
 
+                  <div class="underMap">
+                    <div class="row">
+
+                              <div class="col s12 m7 ">
+                                <div class="card-large fog-red shadow-border " >
+                                  <div class="card-image" >
+                                    <div  id="cat"></div>
+                                        <!--<img  src="images/sample-1.jpg" >--> 
+
+                                  </div>
+                                  <div class="card-content">
+                                  <h5>    <span class="card-title text-padding">Indicator</span>  </h5>
+                                  <div class="fog-wine">
+                                    <p class="text-padding" id="status"></p>
+                                  </div>
+                                  </div>
+                                  <div class="card-action">
+                                    <!-- <a href="#">This is a link</a> -->
+                                  </div>
+                                </div>
+                              </div>
+
+                    </div>
+                  </div>
+
+
+
+
                 </div>
             </div>
         </div>
     </main>
 
 
-    <footer class="fog-purple">
+    <footer class="fog-wine">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
@@ -355,7 +351,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright fog-wine">
+        <div class="footer-copyright black">
             <div class="container white-text">
                 &copy; 2017 Go Fly
                 <a class="white-text"></a>

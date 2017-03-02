@@ -81,17 +81,28 @@ $(document).ready(function() {
                         weatherObj.forecast = weatherInfo.current_observation.weather
                         weatherObj.pressure = weatherInfo.current_observation.pressure_in
                         $('#header-icon').append('<img src='+ weatherObj.icon + '>')
-                        $('#forecast').append('<p>' + weatherObj.forecast + '</p>')
-                        $('#pressure').append('<p>' + weatherObj.pressure + ' in' + '</p>')
-                        $('#humidity').append('<p>' + weatherObj.humidity + '</p>')
-                        $('#temp').append('<p>' + weatherObj.temp + ' f' + '</p>')
-                        $('#precip').append('<p>' + weatherObj.precip + ' in'+ '</p>')
-                        $('#wSpeed').append('<p>' + weatherObj.windSp + ' mph' + '</p>')
-                        $('#vis').append('<p>' + weatherObj.vis + ' mi' + '</p>')
-                        $('#wind-condition').append('<p>' + weatherObj.windStr + '</p>')
-                        $('#bearing').append('<p>' + weatherObj.windDir + '</p>')
-                        $('#gust').append('<p>' + weatherObj.windGust + ' mph' + '</p>')
+                        $('#forecast').append('<h4>' + weatherObj.forecast + '</h4>')
+                        $('#pressure').append('<h4>' + weatherObj.pressure + ' in' + '</h4>')
+                        $('#humidity').append('<h4>' + weatherObj.humidity + '</h4>')
+                        $('#temp').append('<h4>' + weatherObj.temp + ' f' + '</h4>')
+                        $('#precip').append('<h4>' + weatherObj.precip + ' in'+ '</h4>')
+                        $('#wSpeed').append('<h4>' + weatherObj.windSp + ' mph' + '</h4>')
+                        $('#vis').append('<h4>' + weatherObj.vis + ' mi' + '</h4>')
+                        $('#wind-condition').append('<h4>' + weatherObj.windStr + '</h4>')
+                        $('#bearing').append('<h4>' + weatherObj.windDir + '</h4>')
+                        $('#gust').append('<h4>' + weatherObj.windGust + ' mph' + '</h4>')
                         console.log(weatherObj);
+
+                        if (weatherObj.windGust > 5  ||  weatherObj.precip > 20 || weatherObj.vis < 5) {
+                          console.log('No Go');    //<img src="/img/windycat.gif"/>
+                            $('#cat').append('<img src="/img/windycat.gif"/>')
+                            $('#status').append('<h4 style="color:red">' + 'Could Be Trouble' + '</h4>')
+                        } else {
+                          console.log('go');
+                            $('#cat').append('<img src="/img/cat.jpg"/>')
+                            $('#status').append('<h4 style="color:green">' + 'LET\'S DO THIS' + '</h4>')
+                        }
+
                     },
                     error: function() {
                         console.log('Weather error');
