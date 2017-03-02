@@ -73,13 +73,17 @@
                     </div>
                 </div>
 
+                <div class="center" id="toggle">
+                    <a class="waves-effect fog-wine waves-light btn"><i class="material-icons left">cloud</i>toggle units</a>
+                </div>
 
-                <div class="row">
+
+                <div class="row underMap">
                     <div class="col s12 m12 l6">
                         <div class="card-small fog-red shadow-border">
-                          <div class="card-content text-padding">
-                              <h5> Wind Speed </h5>
-                          </div>
+                            <div class="card-content text-padding">
+                                <h5> Wind Speed </h5>
+                            </div>
                             <div class="card-image fog-wine data-padding" id="wSpeed">
                             </div>
                         </div>
@@ -87,9 +91,9 @@
 
                     <div class="col s12 m12 l6">
                         <div class="card-small fog-red shadow-border">
-                          <div class="card-content text-padding">
-                              <h5> Wind Bearing </h5>
-                          </div>
+                            <div class="card-content text-padding">
+                                <h5> Wind Bearing </h5>
+                            </div>
                             <div class="card-image fog-wine data-padding" id="bearing">
                             </div>
                         </div>
@@ -98,9 +102,9 @@
 
                 <div class="col s12 m12 l6">
                     <div class="card-small fog-red shadow-border">
-                      <div class="card-content text-padding">
-                          <h5> Wind Gust </h5>
-                      </div>
+                        <div class="card-content text-padding">
+                            <h5> Wind Gust </h5>
+                        </div>
                         <div class="card-image fog-wine data-padding" id="gust">
                         </div>
                     </div>
@@ -109,9 +113,9 @@
                 <div class="row">
                     <div class="col s12 m12 l6">
                         <div class="card-small fog-red shadow-border">
-                          <div class="card-content text-padding">
-                              <h5> Temperature </h5>
-                          </div>
+                            <div class="card-content text-padding">
+                                <h5> Temperature </h5>
+                            </div>
                             <div class="card-image fog-wine data-padding" id="temp">
                             </div>
                         </div>
@@ -119,22 +123,22 @@
                 </div>
 
                 <div class="row">
-                  <div class="col s12 m12 l6">
-                      <div class="card-small fog-red shadow-border">
-                        <div class="card-content text-padding">
-                            <h5> Visibility </h5>
+                    <div class="col s12 m12 l6">
+                        <div class="card-small fog-red shadow-border">
+                            <div class="card-content text-padding">
+                                <h5> Visibility </h5>
+                            </div>
+                            <div class="card-image fog-wine data-padding" id="vis">
+                            </div>
                         </div>
-                          <div class="card-image fog-wine data-padding" id="vis">
-                          </div>
-                      </div>
-                  </div>
+                    </div>
 
 
                     <div class="col s12 m12 l6">
                         <div class="card-small fog-red shadow-border">
-                          <div class="card-content text-padding">
-                              <h5> Precipitation </h5>
-                          </div>
+                            <div class="card-content text-padding">
+                                <h5> Precipitation </h5>
+                            </div>
                             <div class="card-image fog-wine data-padding" id="precip">
                             </div>
                         </div>
@@ -142,15 +146,15 @@
                 </div>
 
                 <div class="row">
-                  <div class="col s12 m12 l6">
-                      <div class="card-small fog-red shadow-border">
-                        <div class="card-content text-padding">
-                            <h5> Humidity </h5>
+                    <div class="col s12 m12 l6">
+                        <div class="card-small fog-red shadow-border">
+                            <div class="card-content text-padding">
+                                <h5> Humidity </h5>
+                            </div>
+                            <div class="card-image fog-wine data-padding" id="humidity">
+                            </div>
                         </div>
-                          <div class="card-image fog-wine data-padding" id="humidity">
-                          </div>
-                      </div>
-                  </div>
+                    </div>
                     <!-- <div class="col s12 m12 l6">
                         <div class="card-small fog-red shadow-border">
                           <div class="card-content text-padding">
@@ -163,9 +167,9 @@
 
                     <div class="col s12 m12 l6">
                         <div class="card-small fog-red shadow-border">
-                          <div class="card-content white-text text-padding">
-                              <h5> Pressure </h5>
-                          </div>
+                            <div class="card-content white-text text-padding">
+                                <h5> Pressure </h5>
+                            </div>
                             <div class="card-image fog-wine data-padding" id="pressure">
                             </div>
                         </div>
@@ -173,22 +177,24 @@
                 </div>
 
                 <div class="row">
+
+
                     <div class="col s12 m12 l6">
                         <div class="card-small fog-red shadow-border">
-                          <div class="card-content white-text text-padding">
-                            <h5> Wind Conditions </h5>
-                          </div>
-                            <div class="card-image fog-wine " id="wind-condition">
+                            <div class="card-content text-padding">
+                                <h5> Forecast </h5>
+                            </div>
+                            <div class="card-image fog-wine data-padding" id="forecast">
                             </div>
                         </div>
                     </div>
 
                     <div class="col s12 m12 l6">
                         <div class="card-small fog-red shadow-border">
-                          <div class="card-content text-padding">
-                              <h5> Forecast </h5>
-                          </div>
-                            <div class="card-image fog-wine data-padding" id="forecast">
+                            <div class="card-content white-text text-padding">
+                                <h5> Wind Conditions </h5>
+                            </div>
+                            <div class="card-image fog-wine " id="wind-condition">
                             </div>
                         </div>
                     </div>
@@ -205,7 +211,8 @@
                     <h3 class="header black-text text-darken-2 data-padding">Display</h3>
 
 
-        <!-- MAP -->
+                    <!-- MAP -->
+
                     <head>
 
                         <style>
@@ -213,7 +220,9 @@
                                 height: 400px;
                                 width: 100%;
                                 border: 2px solid black;
-                                box-shadow: 0px 0px 14px black;;
+                                border-radius: 10px;
+                                box-shadow: 0px 0px 14px black;
+                                ;
                             }
 
                             #description {
@@ -296,30 +305,30 @@
                         </script>
                     </body>
 
-                  <div class="underMap">
-                    <div class="row">
+                    <div class="underMap">
+                        <div class="row">
 
-                              <div class="col s12 m7 ">
-                                <div class="card-large fog-red shadow-border " >
-                                  <div class="card-image" >
-                                    <div  id="cat"></div>
-                                        <!--<img  src="images/sample-1.jpg" >--> 
+                            <div class="col s12 m12 ">
+                                <div class="card fog-red shadow-border ">
+                                    <div class="card-image">
+                                        <div id="cat"></div>
+                                        <!--<img  src="images/sample-1.jpg" >-->
 
-                                  </div>
-                                  <div class="card-content">
-                                  <h5>    <span class="card-title text-padding">Indicator</span>  </h5>
-                                  <div class="fog-wine">
-                                    <p class="text-padding" id="status"></p>
-                                  </div>
-                                  </div>
-                                  <div class="card-action">
-                                    <!-- <a href="#">This is a link</a> -->
-                                  </div>
+                                    </div>
+                                    <div class="">
+                                        <h5>    <span class="card-title text-padding">Cat Indicator</span>  </h5>
+                                        <div class="fog-wine">
+                                            <p class="text-padding" id="status"></p>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="card-action">
+                                    <a href="#">This is a link</a>
+                                  </div> -->
                                 </div>
-                              </div>
+                            </div>
 
+                        </div>
                     </div>
-                  </div>
 
 
 

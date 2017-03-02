@@ -68,40 +68,116 @@ $(document).ready(function() {
                     success: function(data) {
                         let weatherInfo = data
                         console.log(weatherInfo);
-                        let weatherObj = {}
-                        weatherObj.humidity = weatherInfo.current_observation.relative_humidity
-                        weatherObj.temp = weatherInfo.current_observation.temp_f
-                        weatherObj.windSp = weatherInfo.current_observation.wind_mph
-                        weatherObj.windStr = weatherInfo.current_observation.wind_string
-                        weatherObj.windGust = weatherInfo.current_observation.wind_gust_mph
-                        weatherObj.windDir = weatherInfo.current_observation.wind_dir
-                        weatherObj.precip = weatherInfo.current_observation.precip_today_in
-                        weatherObj.icon = weatherInfo.current_observation.icon_url
-                        weatherObj.vis = weatherInfo.current_observation.visibility_mi
-                        weatherObj.forecast = weatherInfo.current_observation.weather
-                        weatherObj.pressure = weatherInfo.current_observation.pressure_in
-                        $('#header-icon').append('<img src='+ weatherObj.icon + '>')
-                        $('#forecast').append('<h4>' + weatherObj.forecast + '</h4>')
-                        $('#pressure').append('<h4>' + weatherObj.pressure + ' in' + '</h4>')
-                        $('#humidity').append('<h4>' + weatherObj.humidity + '</h4>')
-                        $('#temp').append('<h4>' + weatherObj.temp + ' f' + '</h4>')
-                        $('#precip').append('<h4>' + weatherObj.precip + ' in'+ '</h4>')
-                        $('#wSpeed').append('<h4>' + weatherObj.windSp + ' mph' + '</h4>')
-                        $('#vis').append('<h4>' + weatherObj.vis + ' mi' + '</h4>')
-                        $('#wind-condition').append('<h4>' + weatherObj.windStr + '</h4>')
-                        $('#bearing').append('<h4>' + weatherObj.windDir + '</h4>')
-                        $('#gust').append('<h4>' + weatherObj.windGust + ' mph' + '</h4>')
-                        console.log(weatherObj);
+                        let weatherObj = {
+                            humidity: {},
+                            temp: {},
+                            windSp: {},
+                            windStr: {},
+                            windGust: {},
+                            windDir: {},
+                            precip: {},
+                            icon: {},
+                            vis: {},
+                            forecast: {},
+                            pressure: {}
+                        }
 
-                        if (weatherObj.windGust > 5  ||  weatherObj.precip > 20 || weatherObj.vis < 5) {
-                          console.log('No Go');    //<img src="/img/windycat.gif"/>
+                        // METRIC
+                        weatherObj.humidity.eu = weatherInfo.current_observation.relative_humidity
+                        weatherObj.temp.eu = weatherInfo.current_observation.temp_c
+                        weatherObj.windSp.eu = weatherInfo.current_observation.wind_kph
+                        weatherObj.windStr.eu = weatherInfo.current_observation.wind_string
+                        weatherObj.windGust.eu = weatherInfo.current_observation.wind_gust_kph
+                        weatherObj.windDir.eu = weatherInfo.current_observation.wind_dir
+                        weatherObj.precip.eu = weatherInfo.current_observation.precip_today_metric
+                        weatherObj.icon.eu = weatherInfo.current_observation.icon_url
+                        weatherObj.vis.eu = weatherInfo.current_observation.visibility_km
+                        weatherObj.forecast.eu = weatherInfo.current_observation.weather
+                        weatherObj.pressure.eu = weatherInfo.current_observation.pressure_mb
+
+                        // US
+                        weatherObj.humidity.us = weatherInfo.current_observation.relative_humidity
+                        weatherObj.temp.us = weatherInfo.current_observation.temp_f
+                        weatherObj.windSp.us = weatherInfo.current_observation.wind_mph
+                        weatherObj.windStr.us = weatherInfo.current_observation.wind_string
+                        weatherObj.windGust.us = weatherInfo.current_observation.wind_gust_mph
+                        weatherObj.windDir.us = weatherInfo.current_observation.wind_dir
+                        weatherObj.precip.us = weatherInfo.current_observation.precip_today_in
+                        weatherObj.icon.us = weatherInfo.current_observation.icon_url
+                        weatherObj.vis.us = weatherInfo.current_observation.visibility_mi
+                        weatherObj.forecast.us = weatherInfo.current_observation.weather
+                        weatherObj.pressure.us = weatherInfo.current_observation.pressure_in
+
+                        us()
+
+                        function us() {
+                            $('#header-icon').append('<img src=' + weatherObj.icon.us + '>')
+                            $('#forecast').append('<h4>' + weatherObj.forecast.us + '</h4>')
+                            $('#pressure').append('<h4>' + weatherObj.pressure.us + ' in' + '</h4>')
+                            $('#humidity').append('<h4>' + weatherObj.humidity.us + '</h4>')
+                            $('#temp').append('<h4>' + weatherObj.temp.us + ' f' + '</h4>')
+                            $('#precip').append('<h4>' + weatherObj.precip.us + ' in' + '</h4>')
+                            $('#wSpeed').append('<h4>' + weatherObj.windSp.us + ' mph' + '</h4>')
+                            $('#vis').append('<h4>' + weatherObj.vis.us + ' mi' + '</h4>')
+                            $('#wind-condition').append('<h4>' + weatherObj.windStr.us + '</h4>')
+                            $('#bearing').append('<h4>' + weatherObj.windDir.us + '</h4>')
+                            $('#gust').append('<h4>' + weatherObj.windGust.us + ' mph' + '</h4>')
+                            console.log(weatherObj);
+                        }
+
+                        if (weatherObj.windGust.us > 5 || weatherObj.precip.us > 20 || weatherObj.vis.us < 5) {
+                            console.log('No Go'); //<img src="/img/windycat.gif"/>
                             $('#cat').append('<img src="/img/windycat.gif"/>')
                             $('#status').append('<h4 style="color:red">' + 'Could Be Trouble' + '</h4>')
+
                         } else {
-                          console.log('go');
+                            console.log('go');
                             $('#cat').append('<img src="/img/cat.jpg"/>')
                             $('#status').append('<h4 style="color:green">' + 'LET\'S DO THIS' + '</h4>')
                         }
+
+
+                        function eu() {
+                            $('#header-icon').append('<img src=' + weatherObj.icon.eu + '>')
+                            $('#forecast').append('<h4>' + weatherObj.forecast.eu + '</h4>')
+                            $('#pressure').append('<h4>' + weatherObj.pressure.eu + ' mb' + '</h4>')
+                            $('#humidity').append('<h4>' + weatherObj.humidity.eu + '</h4>')
+                            $('#temp').append('<h4>' + weatherObj.temp.eu + ' c' + '</h4>')
+                            $('#precip').append('<h4>' + weatherObj.precip.eu + ' mm' + '</h4>')
+                            $('#wSpeed').append('<h4>' + weatherObj.windSp.eu + ' kph' + '</h4>')
+                            $('#vis').append('<h4>' + weatherObj.vis.eu + ' km' + '</h4>')
+                            $('#wind-condition').append('<h4>' + weatherObj.windStr.eu + '</h4>')
+                            $('#bearing').append('<h4>' + weatherObj.windDir.eu + '</h4>')
+                            $('#gust').append('<h4>' + weatherObj.windGust.eu + ' kph' + '</h4>')
+                        }
+
+                        let toggle = true;
+
+                        // METRIC TOGGLE
+                        $('#toggle').click(function() {
+                            toggle = !toggle
+
+                            $('#header-icon').text('')
+                            $('#forecast').text('')
+                            $('#pressure').text('')
+                            $('#humidity').text('')
+                            $('#temp').text('')
+                            $('#precip').text('')
+                            $('#wSpeed').text('')
+                            $('#vis').text('')
+                            $('#wind-condition').text('')
+                            $('#bearing').text('')
+                            $('#gust').text('')
+
+                            if (toggle) {
+                                us()
+                            } else {
+                                eu()
+                            }
+                        })
+
+
+
 
                     },
                     error: function() {

@@ -4583,7 +4583,7 @@ small {
   transition: box-shadow .25s;
   padding: 20px;
   margin: 0.5rem 0 1rem 0;
-  border-radius: 30px;
+  border-radius: 10px;
   background-color: #fff;
 }
 
@@ -4592,7 +4592,7 @@ small {
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
   transition: box-shadow .25s;
-  border-radius: 30px;
+  border-radius: 10px;
 
 }
 
@@ -4624,7 +4624,7 @@ small {
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 .card.small {
@@ -4645,7 +4645,7 @@ small {
 
 .card .card-image img {
   display: block;
-  border-radius: 30px 30px 0 0;
+  border-radius: 10px 10px 0 0;
   position: relative;
   left: 0;
   right: 0;
