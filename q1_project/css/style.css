@@ -51,7 +51,9 @@ p {
 .icon-block .material-icons {
   font-size: inherit;
 }
-
+input[type=text]{
+  font-size:20px;
+}
 footer.page-footer {
   margin: 0;
 }
