@@ -111,7 +111,7 @@ $(document).ready(function() {
                         us()
 
                         function us() {
-                            $('#header-icon').append('<img src=' + weatherObj.icon.us + '>')
+                            $('#header-icon').append('Conditions <img src=' + weatherObj.icon.us + '>')
                             $('#forecast').append('<h4>' + weatherObj.forecast.us + '</h4>')
                             $('#pressure').append('<h4>' + weatherObj.pressure.us + ' in' + '</h4>')
                             $('#humidity').append('<h4>' + weatherObj.humidity.us + '</h4>')
@@ -138,7 +138,7 @@ $(document).ready(function() {
 
 
                         function eu() {
-                            $('#header-icon').append('<img src=' + weatherObj.icon.eu + '>')
+                            $('#header-icon').append('Conditions <img src=' + weatherObj.icon.eu + '>')
                             $('#forecast').append('<h4>' + weatherObj.forecast.eu + '</h4>')
                             $('#pressure').append('<h4>' + weatherObj.pressure.eu + ' mb' + '</h4>')
                             $('#humidity').append('<h4>' + weatherObj.humidity.eu + '</h4>')
