@@ -67,3 +67,7 @@ footer.page-footer {
   box-shadow:4px 4px 14px black;
   border-radius: 10px
 }
+
+.par-padding {
+  padding-left: 3%
+}
