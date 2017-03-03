@@ -4160,6 +4160,7 @@ nav i.material-icons {
 
 nav .nav-wrapper {
   position: relative;
+  /*background: rgba(0, 0, 0, 0.4);*/
   height: 100%;
 }
 
