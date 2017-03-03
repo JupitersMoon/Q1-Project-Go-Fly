@@ -61,3 +61,9 @@ footer.page-footer {
 .underMap {
   margin-top: 20px;
 }
+
+.shadow-border {
+  border: 2px solid black;
+  box-shadow:4px 4px 14px black;
+  border-radius: 10px
+}
