@@ -115,7 +115,7 @@ $(document).ready(function() {
                             $('#forecast').append('<h4>' + weatherObj.forecast.us + '</h4>')
                             $('#pressure').append('<h4>' + weatherObj.pressure.us + ' in' + '</h4>')
                             $('#humidity').append('<h4>' + weatherObj.humidity.us + '</h4>')
-                            $('#temp').append('<h4>' + weatherObj.temp.us + ' f' + '</h4>')
+                            $('#temp').append('<h4>' + weatherObj.temp.us + ' \u00B0f' + '</h4>')
                             $('#precip').append('<h4>' + weatherObj.precip.us + ' in' + '</h4>')
                             $('#wSpeed').append('<h4>' + weatherObj.windSp.us + ' mph' + '</h4>')
                             $('#vis').append('<h4>' + weatherObj.vis.us + ' mi' + '</h4>')
@@ -126,12 +126,12 @@ $(document).ready(function() {
                         }
 
                         if (weatherObj.windGust.us > 5 || weatherObj.precip.us > 20 || weatherObj.vis.us < 5) {
-                            console.log('No Go'); //<img src="/img/windycat.gif"/>
+                            console.log('indicator: No Go'); //<img src="/img/windycat.gif"/>
                             $('#cat').append('<img src="/img/windycat.gif"/>')
                             $('#status').append('<h4 style="color:red">' + 'Could Be Trouble' + '</h4>')
 
                         } else {
-                            console.log('go');
+                            console.log('indicator: go');
                             $('#cat').append('<img src="/img/cat.jpg"/>')
                             $('#status').append('<h4 style="color:green">' + 'LET\'S DO THIS' + '</h4>')
                         }
@@ -142,7 +142,7 @@ $(document).ready(function() {
                             $('#forecast').append('<h4>' + weatherObj.forecast.eu + '</h4>')
                             $('#pressure').append('<h4>' + weatherObj.pressure.eu + ' mb' + '</h4>')
                             $('#humidity').append('<h4>' + weatherObj.humidity.eu + '</h4>')
-                            $('#temp').append('<h4>' + weatherObj.temp.eu + ' c' + '</h4>')
+                            $('#temp').append('<h4>' + weatherObj.temp.eu + ' \u00B0c' + '</h4>')
                             $('#precip').append('<h4>' + weatherObj.precip.eu + ' mm' + '</h4>')
                             $('#wSpeed').append('<h4>' + weatherObj.windSp.eu + ' kph' + '</h4>')
                             $('#vis').append('<h4>' + weatherObj.vis.eu + ' km' + '</h4>')
