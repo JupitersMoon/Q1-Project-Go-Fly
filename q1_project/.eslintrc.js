@@ -16,6 +16,6 @@ rules: {
    "no-else-return": "off",
    "no-multiple-empty-lines": "off",
    "prefer-template": "off"
-   "no-undef": "off"
+  //  "no-undef": "off"
  }
 };
